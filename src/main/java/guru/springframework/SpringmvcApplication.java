@@ -21,6 +21,8 @@ public class SpringmvcApplication {
         System.out.println(controller.hello());
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+
+        //get the information by the bean
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 
     }
