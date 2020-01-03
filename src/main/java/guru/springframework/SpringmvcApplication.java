@@ -1,12 +1,10 @@
 package guru.springframework;
 
-import guru.springframework.controllers.ConstructorInjectedController;
-import guru.springframework.controllers.MyController;
-import guru.springframework.controllers.PropertyInjectedController;
-import guru.springframework.controllers.SetterInjectedController;
+import guru.springframework.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class SpringmvcApplication {
@@ -14,6 +12,10 @@ public class SpringmvcApplication {
     public static void main(String[] args) {
 
         ApplicationContext ctx = SpringApplication.run(SpringmvcApplication.class, args);
+
+       // ApplicationContext context = new ClassPathXmlApplicationContext(args);
+
+      //  ApplicationContext context1 = SpringApplication.run(SpringApplication.class, args);
 
         MyController controller = (MyController) ctx.getBean("myController");
 
@@ -24,6 +26,9 @@ public class SpringmvcApplication {
 
         //get the information by the bean
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+        System.out.println();
+        System.out.println(ctx.getBean(ConstructorTestController.class).test());
+        System.out.println(ctx.getBean(ConstructorTestController.class).test2());
 
     }
 }
