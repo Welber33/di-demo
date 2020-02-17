@@ -1,5 +1,4 @@
 #Spring Core - Spring MVC
 
-Source code in this repo is to support my on line course for the Spring Framework. 
+this code is to show how dependency injection works on Spring.
 
-You can learn more about my course [here](http://courses.springframework.guru/courses/spring-core/).
