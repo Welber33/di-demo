@@ -27,8 +27,9 @@ public class SpringmvcApplication {
         //get the information by the bean
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
         System.out.println();
-        System.out.println(ctx.getBean(ConstructorTestController.class).test());
-        System.out.println(ctx.getBean(ConstructorTestController.class).test2());
+        //System.out.println(ctx.getBean(ConstructorTestController.class).test());
+        //System.out.println(ctx.getBean(ConstructorTestController.class).test2());
+        System.out.println(ctx.getBean(ConstructorTestController2.class).testInjection());
 
     }
 }
